@@ -20,13 +20,11 @@ class HomePage extends StatelessWidget {
           children: const [
             ListTile(title: Text('Home Page')),
             ListTile(title: Text('About Page')),
-          ],
+          ],    
         ),
       ),
-      body: const Center(
-        child:
-            BiggerText(teks: "Hello ULBI"), //Ubah widget Heading keBiggerText
-      ),
+      body: MyContainer(),
+    
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
@@ -84,3 +82,21 @@ class _BiggerTextState extends State<BiggerText> {
     );
   }
 }
+
+class MyContainer extends StatelessWidget {
+  const MyContainer({Key? key}) : super(key: key);
+@override
+Widget build(BuildContext context) {
+return Container(
+color: Colors.blue,
+width: 200,
+height: 100,
+child: const Text(
+'Hi',
+style: TextStyle(fontSize: 40),
+),
+);
+
+}
+}
+
